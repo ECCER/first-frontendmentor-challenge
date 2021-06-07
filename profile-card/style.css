@@ -1,0 +1,139 @@
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%)
+}
+
+html {
+    font-size: 50%;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 18px;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-cyan);
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 2.25rem;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+}
+
+.tarjeta {
+    background-color: white;
+    /* width: 30rem; */
+    border-radius: 2rem;
+    /* overflow: hidden; */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+main::before {
+    content: url(images/bg-pattern-top.svg);
+    /* width: 100vw;
+    height: 100vh; */
+    /* background-image: url(images/bg-pattern-top.svg);
+    background-size: cover; */
+    position: absolute;
+    top: -85rem;
+    left: -104rem;
+    z-index: 1;
+}
+
+@media (max-width: 585px) {
+    main::before {
+        top: -95rem;
+        left: -95rem;
+    }
+}
+
+main::after {
+    content: url(images/bg-pattern-bottom.svg);
+    /* width: 100vw;
+    height: 100vh; */
+    /* background-image: url(images/bg-pattern-top.svg);
+    background-size: cover; */
+    position: absolute;
+    top: 29rem;
+    left: 12rem;
+    z-index: 2;
+}
+
+@media (max-width: 585px) {
+    main::after {
+        top: 16rem;
+        left: 18rem;
+    }
+}
+
+.superior img {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.centro {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #ededed;
+}
+
+.centro img {
+    /* width: 7rem; */
+    border-radius: 50%;
+    margin-top: -7.5rem;
+    margin-bottom: 3rem;
+    border: white solid 5px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: inherit;
+    color: var(--very-dark-desaturated-blue);
+}
+
+.centro span {
+    font-weight: 400;
+    margin: 0 1rem;
+    display: inline-block;
+    color: var(--dark-grayish-blue);
+}
+
+.centro p {
+    color: var(--dark-grayish-blue);
+    margin-top: 1.25rem;
+    font-size: 1.75rem;
+}
+
+.inferior {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 6rem;
+}
+
+.stats .numero {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+.stats .texto {
+    letter-spacing: 1px;
+    color: var(--dark-grayish-blue);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
